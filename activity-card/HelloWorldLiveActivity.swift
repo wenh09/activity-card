@@ -51,16 +51,3 @@ struct HelloWorldLiveActivity: Widget {
         .contentMarginsDisabled()
     }
 }
-
-struct HelloWorldLiveActivity_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            // 预览锁屏界面
-            ActivityConfiguration<HelloWorldAttributes>.ContentView(
-                attributes: HelloWorldAttributes(name: "Preview"),
-                state: HelloWorldAttributes.ContentState(message: "Preview Message")
-            )
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-        }
-    }
-}

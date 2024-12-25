@@ -28,13 +28,16 @@ struct widget_wordLiveActivity: Widget {
                         .foregroundColor(.white)
                 }
             } compactLeading: {
-                Text("Hello")
+                Text("恭喜发财")
+                    .font(.system(size: 10))
                     .foregroundColor(.white)
             } compactTrailing: {
-                Text("World")
+                Text("红包拿来")
+                    .font(.system(size: 10))
                     .foregroundColor(.white)
             } minimal: {
-                Text("Hi")
+                Text("💗")
+                    .font(.system(size: 10))
                     .foregroundColor(.white)
             }
         }

@@ -31,7 +31,7 @@ struct ContentView: View {
     
     func startLiveActivity() {
         let attributes = HelloWorldAttributes(name: "Dynamic Island")
-        let state = HelloWorldAttributes.ContentState(message: "Hello World")
+        let state = HelloWorldAttributes.ContentState(message: "wen hao")
         let content = ActivityContent(state: state, staleDate: nil)
         
         do {
