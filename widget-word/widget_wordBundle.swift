@@ -11,8 +11,6 @@ import SwiftUI
 @main
 struct widget_wordBundle: WidgetBundle {
     var body: some Widget {
-        widget_word()
-        widget_wordControl()
         widget_wordLiveActivity()
     }
 }
