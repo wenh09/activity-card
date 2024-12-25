@@ -28,17 +28,37 @@ struct widget_wordLiveActivity: Widget {
                         .foregroundColor(.white)
                 }
             } compactLeading: {
-                Text("恭喜发财")
-                    .font(.system(size: 10))
-                    .foregroundColor(.white)
+                HStack {
+                    Text(context.state.leftText)
+                        .font(.system(size: 10))
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(width: 100)
+                }
+                .frame(width: 100)
+                .background(Color.blue.opacity(0.8))
             } compactTrailing: {
-                Text("红包拿来")
-                    .font(.system(size: 10))
-                    .foregroundColor(.white)
+                HStack {
+                    Text(context.state.rightText)
+                        .font(.system(size: 10))
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(width: 100)
+                }
+                .frame(width: 100)
+                .background(Color.blue.opacity(0.8))
             } minimal: {
-                Text("💗")
-                    .font(.system(size: 10))
-                    .foregroundColor(.white)
+                HStack {
+                    Text(context.state.minimalText)
+                        .font(.system(size: 10))
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                }
+                .frame(width: 100)
+                .background(Color.blue.opacity(0.8))
             }
         }
     }
@@ -47,7 +67,12 @@ struct widget_wordLiveActivity: Widget {
 @available(iOS 16.1, *)
 struct widget_wordLiveActivity_Previews: PreviewProvider {
     static let attributes = HelloWorldAttributes(name: "World")
-    static let contentState = HelloWorldAttributes.ContentState(message: "Hello World")
+    static let contentState = HelloWorldAttributes.ContentState(
+        message: "Hello World",
+        leftText: "恭喜发财",
+        rightText: "红包拿来",
+        minimalText: "💗"
+    )
     
     static var previews: some View {
         attributes
