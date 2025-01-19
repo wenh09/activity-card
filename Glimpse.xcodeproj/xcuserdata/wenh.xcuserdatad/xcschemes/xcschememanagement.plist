@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glimpse.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>activity-card-widgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +17,12 @@
 		<key>activity-card.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>widget-wordExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>

@@ -51,21 +51,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		214EF2CA2D1B243700972842 /* activity-card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "activity-card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		214EF2DA2D1B243900972842 /* activity-cardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "activity-cardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		214EF2E42D1B243900972842 /* activity-cardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "activity-cardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		214EF2CA2D1B243700972842 /* Glimpse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glimpse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		214EF2DA2D1B243900972842 /* GlimpseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlimpseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		214EF2E42D1B243900972842 /* GlimpseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlimpseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		214EF3072D1B27E200972842 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		214EF3092D1B27E200972842 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		214EF3272D1B2A5B00972842 /* widget-wordExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "widget-wordExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		214EF3222D1B28CB00972842 /* Exceptions for "activity-card" folder in "activity-card" target */ = {
+		214EF3222D1B28CB00972842 /* Exceptions for "activity-card" folder in "Glimpse" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 214EF2C92D1B243700972842 /* activity-card */;
+			target = 214EF2C92D1B243700972842 /* Glimpse */;
 		};
 		214EF33E2D1B2A5C00972842 /* Exceptions for "widget-word" folder in "widget-wordExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -80,7 +80,7 @@
 		214EF2CC2D1B243700972842 /* activity-card */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				214EF3222D1B28CB00972842 /* Exceptions for "activity-card" folder in "activity-card" target */,
+				214EF3222D1B28CB00972842 /* Exceptions for "activity-card" folder in "Glimpse" target */,
 			);
 			path = "activity-card";
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 		214EF2CB2D1B243700972842 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				214EF2CA2D1B243700972842 /* activity-card.app */,
-				214EF2DA2D1B243900972842 /* activity-cardTests.xctest */,
-				214EF2E42D1B243900972842 /* activity-cardUITests.xctest */,
+				214EF2CA2D1B243700972842 /* Glimpse.app */,
+				214EF2DA2D1B243900972842 /* GlimpseTests.xctest */,
+				214EF2E42D1B243900972842 /* GlimpseUITests.xctest */,
 				214EF3272D1B2A5B00972842 /* widget-wordExtension.appex */,
 			);
 			name = Products;
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		214EF2C92D1B243700972842 /* activity-card */ = {
+		214EF2C92D1B243700972842 /* Glimpse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 214EF2EE2D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-card" */;
+			buildConfigurationList = 214EF2EE2D1B243900972842 /* Build configuration list for PBXNativeTarget "Glimpse" */;
 			buildPhases = (
 				214EF2C62D1B243700972842 /* Sources */,
 				214EF2C72D1B243700972842 /* Frameworks */,
@@ -191,16 +191,16 @@
 			fileSystemSynchronizedGroups = (
 				214EF2CC2D1B243700972842 /* activity-card */,
 			);
-			name = "activity-card";
+			name = Glimpse;
 			packageProductDependencies = (
 			);
 			productName = "activity-card";
-			productReference = 214EF2CA2D1B243700972842 /* activity-card.app */;
+			productReference = 214EF2CA2D1B243700972842 /* Glimpse.app */;
 			productType = "com.apple.product-type.application";
 		};
-		214EF2D92D1B243900972842 /* activity-cardTests */ = {
+		214EF2D92D1B243900972842 /* GlimpseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 214EF2F12D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-cardTests" */;
+			buildConfigurationList = 214EF2F12D1B243900972842 /* Build configuration list for PBXNativeTarget "GlimpseTests" */;
 			buildPhases = (
 				214EF2D62D1B243900972842 /* Sources */,
 				214EF2D72D1B243900972842 /* Frameworks */,
@@ -214,16 +214,16 @@
 			fileSystemSynchronizedGroups = (
 				214EF2DD2D1B243900972842 /* activity-cardTests */,
 			);
-			name = "activity-cardTests";
+			name = GlimpseTests;
 			packageProductDependencies = (
 			);
 			productName = "activity-cardTests";
-			productReference = 214EF2DA2D1B243900972842 /* activity-cardTests.xctest */;
+			productReference = 214EF2DA2D1B243900972842 /* GlimpseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		214EF2E32D1B243900972842 /* activity-cardUITests */ = {
+		214EF2E32D1B243900972842 /* GlimpseUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 214EF2F42D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-cardUITests" */;
+			buildConfigurationList = 214EF2F42D1B243900972842 /* Build configuration list for PBXNativeTarget "GlimpseUITests" */;
 			buildPhases = (
 				214EF2E02D1B243900972842 /* Sources */,
 				214EF2E12D1B243900972842 /* Frameworks */,
@@ -237,11 +237,11 @@
 			fileSystemSynchronizedGroups = (
 				214EF2E72D1B243900972842 /* activity-cardUITests */,
 			);
-			name = "activity-cardUITests";
+			name = GlimpseUITests;
 			packageProductDependencies = (
 			);
 			productName = "activity-cardUITests";
-			productReference = 214EF2E42D1B243900972842 /* activity-cardUITests.xctest */;
+			productReference = 214EF2E42D1B243900972842 /* GlimpseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		214EF3262D1B2A5B00972842 /* widget-wordExtension */ = {
@@ -292,7 +292,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 214EF2C52D1B243700972842 /* Build configuration list for PBXProject "activity-card" */;
+			buildConfigurationList = 214EF2C52D1B243700972842 /* Build configuration list for PBXProject "Glimpse" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -306,9 +306,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				214EF2C92D1B243700972842 /* activity-card */,
-				214EF2D92D1B243900972842 /* activity-cardTests */,
-				214EF2E32D1B243900972842 /* activity-cardUITests */,
+				214EF2C92D1B243700972842 /* Glimpse */,
+				214EF2D92D1B243900972842 /* GlimpseTests */,
+				214EF2E32D1B243900972842 /* GlimpseUITests */,
 				214EF3262D1B2A5B00972842 /* widget-wordExtension */,
 			);
 		};
@@ -379,12 +379,12 @@
 /* Begin PBXTargetDependency section */
 		214EF2DC2D1B243900972842 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 214EF2C92D1B243700972842 /* activity-card */;
+			target = 214EF2C92D1B243700972842 /* Glimpse */;
 			targetProxy = 214EF2DB2D1B243900972842 /* PBXContainerItemProxy */;
 		};
 		214EF2E62D1B243900972842 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 214EF2C92D1B243700972842 /* activity-card */;
+			target = 214EF2C92D1B243700972842 /* Glimpse */;
 			targetProxy = 214EF2E52D1B243900972842 /* PBXContainerItemProxy */;
 		};
 		214EF3392D1B2A5C00972842 /* PBXTargetDependency */ = {
@@ -594,7 +594,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activity-card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/activity-card";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glimpse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Glimpse";
 			};
 			name = Debug;
 		};
@@ -613,7 +613,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activity-card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/activity-card";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glimpse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Glimpse";
 			};
 			name = Release;
 		};
@@ -724,7 +724,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		214EF2C52D1B243700972842 /* Build configuration list for PBXProject "activity-card" */ = {
+		214EF2C52D1B243700972842 /* Build configuration list for PBXProject "Glimpse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214EF2EC2D1B243900972842 /* Debug */,
@@ -733,7 +733,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		214EF2EE2D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-card" */ = {
+		214EF2EE2D1B243900972842 /* Build configuration list for PBXNativeTarget "Glimpse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214EF2EF2D1B243900972842 /* Debug */,
@@ -742,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		214EF2F12D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-cardTests" */ = {
+		214EF2F12D1B243900972842 /* Build configuration list for PBXNativeTarget "GlimpseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214EF2F22D1B243900972842 /* Debug */,
@@ -751,7 +751,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		214EF2F42D1B243900972842 /* Build configuration list for PBXNativeTarget "activity-cardUITests" */ = {
+		214EF2F42D1B243900972842 /* Build configuration list for PBXNativeTarget "GlimpseUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214EF2F52D1B243900972842 /* Debug */,

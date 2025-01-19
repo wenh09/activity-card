@@ -6,5 +6,20 @@
     <true/>
     <key>NSLiveActivityUsageDescription</key>
     <string>We need Live Activities to show real-time updates in Dynamic Island</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>feishu.cn</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

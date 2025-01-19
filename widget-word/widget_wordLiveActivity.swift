@@ -12,66 +12,46 @@ import WidgetKit
 @available(iOS 16.1, *)
 struct widget_wordLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration<HelloWorldAttributes>(for: HelloWorldAttributes.self) { context in
-            // Live Activity View (Dynamic Island)
-            HStack {
-                Text(context.state.message)
-                    .foregroundColor(.white)
-            }
-            .padding()
-            .activityBackgroundTint(.blue)
+        ActivityConfiguration<HelloWorldAttributes>(for: HelloWorldAttributes.self) { _ in
+            EmptyView()
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded View
                 DynamicIslandExpandedRegion(.center) {
-                    Text(context.state.message)
-                        .foregroundColor(.white)
+                    HStack(spacing: 12) {
+                        Text(context.state.leftText)
+                            .bold()
+                            .font(.system(size: 18))
+                        
+                        Text(context.state.rightText)
+                            .font(.system(size: 18))
+                    }
+                    .padding(.horizontal)
                 }
             } compactLeading: {
-                HStack {
-                    Text(context.state.leftText)
-                        .font(.system(size: 10))
-                        .foregroundColor(.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .frame(width: 100)
-                }
-                .frame(width: 100)
-                .background(Color.blue.opacity(0.8))
+                Text(context.state.leftText)
+                    .font(.system(size: 14))
+                    .bold()
             } compactTrailing: {
-                HStack {
-                    Text(context.state.rightText)
-                        .font(.system(size: 10))
-                        .foregroundColor(.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .frame(width: 100)
-                }
-                .frame(width: 100)
-                .background(Color.blue.opacity(0.8))
+                Text(context.state.rightText)
+                    .font(.system(size: 14))
             } minimal: {
-                HStack {
-                    Text(context.state.minimalText)
-                        .font(.system(size: 10))
-                        .foregroundColor(.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                }
-                .frame(width: 100)
-                .background(Color.blue.opacity(0.8))
+                Text("📚")
             }
+            .widgetURL(URL(string: "widget-word://refresh"))
+            .keylineTint(.cyan)
         }
     }
 }
 
 @available(iOS 16.1, *)
 struct widget_wordLiveActivity_Previews: PreviewProvider {
-    static let attributes = HelloWorldAttributes(name: "World")
+    static let attributes = HelloWorldAttributes(name: "TOEFL Words")
     static let contentState = HelloWorldAttributes.ContentState(
-        message: "Hello World",
-        leftText: "恭喜发财",
-        rightText: "红包拿来",
-        minimalText: "💗"
+        message: "abandon",
+        leftText: "abandon",
+        rightText: "放弃",
+        minimalText: "📚"
     )
     
     static var previews: some View {
@@ -84,8 +64,5 @@ struct widget_wordLiveActivity_Previews: PreviewProvider {
         attributes
             .previewContext(contentState, viewKind: .dynamicIsland(.minimal))
             .previewDisplayName("Minimal")
-        attributes
-            .previewContext(contentState, viewKind: .content)
-            .previewDisplayName("Notification")
     }
 }
