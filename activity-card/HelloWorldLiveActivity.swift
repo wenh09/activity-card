@@ -8,28 +8,27 @@ struct HelloWorldLiveActivity: Widget {
         ActivityConfiguration<HelloWorldAttributes>(for: HelloWorldAttributes.self) { _ in
             EmptyView()
         } dynamicIsland: { context in
-            let _ = print("Dynamic Island update triggered: \(context.state.leftText) - \(context.state.rightText)")
-            
-            return DynamicIsland {
+            DynamicIsland {
                 DynamicIslandExpandedRegion(.center) {
-                    HStack(spacing: 12) {
-                        VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        // 第一行：单词、音标、词性+释义
+                        HStack(spacing: 12) {
                             Text(context.state.leftText)
-                                .font(.system(size: 16, weight: .bold))
-                                .foregroundColor(.white)
-                            Text("Word")
-                                .font(.system(size: 12))
-                                .foregroundColor(.gray)
+                                .font(.system(size: 15, weight: .bold))
+                            
+                            Text(context.state.phonetic)
+                                .font(.system(size: 15))
+                            
+                            Text("\(context.state.partOfSpeech) \(context.state.rightText)")
+                                .font(.system(size: 15))
                         }
+                        .foregroundColor(.white)
                         
-                        VStack(alignment: .trailing) {
-                            Text(context.state.rightText)
-                                .font(.system(size: 16))
-                                .foregroundColor(.white)
-                            Text("Definition")
-                                .font(.system(size: 12))
-                                .foregroundColor(.gray)
-                        }
+                        // 第二行：例句
+                        Text(context.state.example)
+                            .font(.system(size: 12))
+                            .foregroundColor(.gray)
+                            .lineLimit(2)
                     }
                     .padding(.horizontal)
                 }
@@ -55,7 +54,10 @@ struct HelloWorldLiveActivity_Previews: PreviewProvider {
         message: "Hello",
         leftText: "Hello",
         rightText: "你好",
-        minimalText: "📚"
+        minimalText: "📚",
+        phonetic: "[həˈləʊ]",
+        partOfSpeech: "int.",
+        example: "Hello, how are you today?"
     )
 
     static var previews: some View {

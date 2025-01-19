@@ -18,23 +18,35 @@ struct widget_wordLiveActivity: Widget {
             DynamicIsland {
                 // Expanded View
                 DynamicIslandExpandedRegion(.center) {
-                    HStack(spacing: 12) {
-                        Text(context.state.leftText)
-                            .bold()
-                            .font(.system(size: 18))
+                    VStack(alignment: .leading, spacing: 8) {
+                        // 第一行：单词、音标、词性+释义
+                        HStack(spacing: 12) {
+                            Text(context.state.leftText)
+                                .font(.system(size: 15, weight: .bold))
+                            
+                            Text(context.state.phonetic)
+                                .font(.system(size: 15))
+                            
+                            Text("\(context.state.partOfSpeech) \(context.state.rightText)")
+                                .font(.system(size: 15))
+                        }
+                        .foregroundColor(.white)
                         
-                        Text(context.state.rightText)
-                            .font(.system(size: 18))
+                        // 第二行：例句
+                        Text(context.state.example)
+                            .font(.system(size: 12))
+                            .foregroundColor(.gray)
+                            .lineLimit(2)
                     }
                     .padding(.horizontal)
                 }
             } compactLeading: {
                 Text(context.state.leftText)
-                    .font(.system(size: 14))
+                    .font(.system(size: 12))
                     .bold()
             } compactTrailing: {
                 Text(context.state.rightText)
-                    .font(.system(size: 14))
+                    .font(.system(size: 12))
             } minimal: {
                 Text("📚")
             }
@@ -51,7 +63,10 @@ struct widget_wordLiveActivity_Previews: PreviewProvider {
         message: "abandon",
         leftText: "abandon",
         rightText: "放弃",
-        minimalText: "📚"
+        minimalText: "📚",
+        phonetic: "[ə'bændən]",
+        partOfSpeech: "v.",
+        example: "The hikers had to abandon their original plan due to the severe weather conditions."
     )
     
     static var previews: some View {

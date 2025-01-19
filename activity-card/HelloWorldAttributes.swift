@@ -9,6 +9,9 @@ struct HelloWorldAttributes: ActivityAttributes {
         var leftText: String
         var rightText: String
         var minimalText: String
+        var phonetic: String
+        var partOfSpeech: String
+        var example: String
     }
     
     var name: String
