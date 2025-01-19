@@ -107,8 +107,14 @@ struct ContentView: View {
                     rightText: currentWord.definition,
                     minimalText: "📚"
                 )
-                let content = ActivityContent(state: state, staleDate: nil)
+                
+                let content = ActivityContent(
+                    state: state,
+                    staleDate: .now.addingTimeInterval(3.0)
+                )
+                
                 await currentActivity.update(content)
+                print("更新单词：\(currentWord.word) - \(currentWord.definition)")
             }
         }
     }
@@ -126,11 +132,24 @@ struct ContentView: View {
             rightText: currentWord.definition,
             minimalText: "📚"
         )
-        let content = ActivityContent(state: state, staleDate: nil)
+        
+        // 设置高优先级和较长的过期时间
+        let content = ActivityContent(
+            state: state, 
+            staleDate: .now.addingTimeInterval(24 * 60 * 60), // 24小时
+            relevanceScore: 100.0 // 设置最高优先级
+        )
         
         do {
             activity = try Activity.request(attributes: attributes, content: content)
             print("灵动岛启动成功，开始单词：\(currentWord.word)")
+            
+            // 保持应用在后台活跃
+            var backgroundTaskID: UIBackgroundTaskIdentifier = .invalid
+            backgroundTaskID = UIApplication.shared.beginBackgroundTask {
+                UIApplication.shared.endBackgroundTask(backgroundTaskID)
+                backgroundTaskID = .invalid
+            }
             
             isTimerRunning = true
             return true
@@ -159,7 +178,8 @@ struct ContentView: View {
     }
     
     private func minimizeApp() {
-        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+        // 使用更安全的方式最小化应用
+        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
     }
 }
 

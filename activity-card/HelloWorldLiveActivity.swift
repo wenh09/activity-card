@@ -8,27 +8,30 @@ struct HelloWorldLiveActivity: Widget {
         ActivityConfiguration<HelloWorldAttributes>(for: HelloWorldAttributes.self) { _ in
             EmptyView()
         } dynamicIsland: { context in
-            DynamicIsland {
-                DynamicIslandExpandedRegion(.leading) {
-                    VStack(alignment: .leading) {
-                        Text(context.state.leftText)
-                            .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(.white)
-                        Text("Word")
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
+            let _ = print("Dynamic Island update triggered: \(context.state.leftText) - \(context.state.rightText)")
+            
+            return DynamicIsland {
+                DynamicIslandExpandedRegion(.center) {
+                    HStack(spacing: 12) {
+                        VStack(alignment: .leading) {
+                            Text(context.state.leftText)
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(.white)
+                            Text("Word")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        VStack(alignment: .trailing) {
+                            Text(context.state.rightText)
+                                .font(.system(size: 16))
+                                .foregroundColor(.white)
+                            Text("Definition")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
+                        }
                     }
-                }
-                
-                DynamicIslandExpandedRegion(.trailing) {
-                    VStack(alignment: .trailing) {
-                        Text(context.state.rightText)
-                            .font(.system(size: 16))
-                            .foregroundColor(.white)
-                        Text("Definition")
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
-                    }
+                    .padding(.horizontal)
                 }
             } compactLeading: {
                 Text(context.state.leftText)
